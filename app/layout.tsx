@@ -4,7 +4,7 @@ import { Noto_Sans_TC } from "next/font/google";
 
 import HeaderBar from "@/components/home/HeaderBar";
 
-import "@/app/styles/global.scss";
+import "@/styles/global.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 const notoSansTC = Noto_Sans_TC({ subsets: ["latin"] });
