@@ -1,3 +1,5 @@
+import Work from "@/components/gallery/Work";
+
 import "@/styles/home/Home.scss";
 
 export default function Home() {
@@ -9,6 +11,7 @@ export default function Home() {
           明道中學高中美展 7th
         </h2>
       </div>
+      <Work></Work>
     </>
   );
 }
