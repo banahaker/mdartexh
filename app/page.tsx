@@ -11,7 +11,13 @@ export default function Home() {
           明道中學高中美展 7th
         </h2>
       </div>
-      <Work></Work>
+      <Work
+        author="陳凱恩"
+        name="The Deathly Hallows "
+        type="紙雕燈"
+        description="此件作品以電影Harry Potter中所提及的「死神的聖物」作為發想。"
+        link="/images/sample_work.jpeg"
+      ></Work>
     </>
   );
 }
