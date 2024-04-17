@@ -28,6 +28,7 @@ export default function Work(props: TProps) {
                 src={props.link}
                 alt=""
                 className="max-h-[calc(100dvh-12rem)] rounded-xl"
+                loading="lazy"
               />
             </div>
             <div className="work-information flex-1 flex flex-col items-start max-[800px]:items-center text-start max-[800px]:text-center">
