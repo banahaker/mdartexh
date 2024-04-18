@@ -25,13 +25,13 @@ export default function Work(props: TProps) {
         <div className="work-info absolute top-24 left-1/2 -translate-x-1/2 text-white text-center h-[calc(100dvh-8rem)] w-[calc(100dvw-12rem)] backdrop-blur-md bg-white/30 px-8 py-4 rounded-xl max-[800px]:w-[calc(100dvw-4rem)]">
           <div className="wrapper w-full h-full flex gap-8 items-center max-[800px]:flex-col max-[800px]:justify-center ">
             <div
-              className="work-display flex flex-col items-center justify-center"
+              className="work-display flex flex-col items-center justify-center  rounded-xl"
               style={{ flex: 1 }}
             >
               <img
                 src={props.link}
                 alt=""
-                className="max-h-[calc(100dvh-12rem)] rounded-xl"
+                className="max-h-[calc((100dvh-12rem)/1.5)] rounded-xl"
                 loading="lazy"
               />
             </div>
