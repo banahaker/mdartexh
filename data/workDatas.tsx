@@ -399,13 +399,13 @@ export const works: TWork[] = [
     type: "色鉛筆",
     description: "無",
   },
-  {
-    link: "/images/image133.jpg",
-    author: "X212鄭可婕",
-    name: " 秋 ",
-    type: "水彩",
-    description: "無",
-  },
+  // {
+  //   link: "/images/image133.jpg",
+  //   author: "X212鄭可婕",
+  //   name: " 秋 ",
+  //   type: "水彩",
+  //   description: "無",
+  // },
   {
     link: "/images/image186.jpg",
     author: "X28劉紘宇",
