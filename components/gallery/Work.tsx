@@ -43,17 +43,16 @@ export default function Work(props: TProps) {
                 {props.name}
               </div>
               <div className="flex gap-3">
-                <div className="type text-sm py-1 px-2 bg-slate-400/30 rounded-full text-slate-300 my-1">
+                <div className="type text-sm py-1 px-2 bg-slate-400/30 rounded-full text-slate-200 my-1">
                   {props.type}
                 </div>
                 <div
                   className="type text-sm py-1 px-2 bg-slate-900/80 rounded-full text-slate-300 my-1 cursor-pointer text-center"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      `${window.location.hostname}/work/${props.link.replace(
-                        "/images/",
-                        ""
-                      )}`
+                      `https://${
+                        window.location.hostname
+                      }/work/${props.link.replace("/images/", "")}`
                     );
                     setIsCopied(true);
                     console.log(isCopied);
