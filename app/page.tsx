@@ -33,32 +33,7 @@ export default function Home() {
       }
     };
 
-    const handleTouchScroll = (event: TouchEvent) => {
-      const touch = event.touches[0];
-      const scrollDirection = touch.pageY - currentScroll;
-
-      if (scrollDirection > 0) {
-        const targetPosition = currentScroll + window.innerHeight;
-        setCurrentScroll(targetPosition);
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-        event.preventDefault();
-      } else {
-        const targetPosition = currentScroll - window.innerHeight;
-        setCurrentScroll(targetPosition);
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-        event.preventDefault();
-      }
-    };
-
     window.addEventListener("wheel", handleWheelScroll, { passive: false });
-    // phone scroll
-    window.addEventListener("touchmove", handleTouchScroll, { passive: false });
   }, [currentScroll]);
 
   return (
