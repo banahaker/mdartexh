@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import "@/styles/home/Home.scss";
 
 type TProps = {
@@ -9,6 +13,8 @@ type TProps = {
 };
 
 export default function Work(props: TProps) {
+  const [isCopied, setIsCopied] = useState(false);
+
   return (
     <>
       <div className="work-outer bg-slate-50 w-[100dvw] h-[100dvh] relative overflow-hidden">
@@ -36,8 +42,28 @@ export default function Work(props: TProps) {
               <div className="name text-3xl text-blue-300 my-1 font-extrabold">
                 {props.name}
               </div>
-              <div className="type text-sm py-1 px-2 bg-slate-400/30 rounded-full text-slate-300 my-1">
-                {props.type}
+              <div className="flex gap-3">
+                <div className="type text-sm py-1 px-2 bg-slate-400/30 rounded-full text-slate-300 my-1">
+                  {props.type}
+                </div>
+                <div
+                  className="type text-sm py-1 px-2 bg-slate-900/80 rounded-full text-slate-300 my-1 cursor-pointer text-center"
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      `${window.location.hostname}/work/${props.link.replace(
+                        "/images/",
+                        ""
+                      )}`
+                    );
+                    setIsCopied(true);
+                    console.log(isCopied);
+                    setTimeout(() => {
+                      setIsCopied(false);
+                    }, 1500);
+                  }}
+                >
+                  {isCopied ? "Copied!" : "分享"}
+                </div>
               </div>
               <div className="description py-2 px-1 text-start max-[800px]:text-center">
                 {props.description}
