@@ -48,9 +48,9 @@ export default function Work({
               loading="lazy"
             />
           </div>
-          <div className="work-information flex-1 flex flex-col items-start text-start max-[800px]:text-center">
+          <div className="work-information flex-1 flex flex-col items-start text-start max-[800px]:items-center gap-1 w-full">
             <div className="author text-lg text-slate-300">{author}</div>
-            <div className="name text-3xl text-blue-300 my-1 font-extrabold">
+            <div className="name text-3xl text-blue-300 my-1 font-extrabold max-[800px]:text-center">
               {name}
             </div>
             <div className="type-wrapper flex gap-3">
