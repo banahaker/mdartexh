@@ -39,13 +39,21 @@ export default function Home() {
       }
     };
 
-    window.addEventListener("wheel", handleWheelScroll, { passive: false });
+    function isTouchDevice() {
+      return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    }
+
+    if (isTouchDevice()) {
+      window.removeEventListener("wheel", handleWheelScroll, false);
+    } else {
+      window.addEventListener("wheel", handleWheelScroll, { passive: false });
+    }
   }, [currentScroll]);
 
   return (
     <>
       <div>
-        <div className="backgroundFilter h-[100dvh] bg-[url('/images/main_vision.webp')]"></div>
+        <div className="backgroundFilter h-[100svh] bg-[url('/images/main_vision.webp')]"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
           <h1 className="header-main-text text-6xl font-bold text-white">
             夢艷
