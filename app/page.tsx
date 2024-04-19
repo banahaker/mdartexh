@@ -6,9 +6,15 @@ import Work from "@/components/gallery/Work";
 import { works } from "@/data/workDatas";
 
 import "@/styles/home/Home.scss";
+import { shuffleArray } from "@/utils/shuffleArray";
 
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState(0);
+  const [worksShuffled, setWorksShuffled] = useState<any[]>([]);
+
+  useEffect(() => {
+    setWorksShuffled(shuffleArray(works));
+  }, []);
 
   useEffect(() => {
     const handleWheelScroll = (event: WheelEvent) => {
@@ -50,7 +56,7 @@ export default function Home() {
         </div>
       </div>
 
-      {works.map((work) => {
+      {worksShuffled.map((work) => {
         return <Work key={work.link} {...work}></Work>;
       })}
     </>
