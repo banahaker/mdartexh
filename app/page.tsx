@@ -58,7 +58,7 @@ export default function Home() {
           <h1 className="header-main-text text-6xl font-bold text-white">
             夢艷
           </h1>
-          <h2 className="text-2xl text-gray-300 font-medium">
+          <h2 className="text-2xl text-gray-300 font-medium text-center">
             明道中學高中美展 7th
           </h2>
         </div>
