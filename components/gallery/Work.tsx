@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 
 import "@/styles/home/Home.scss";
 
@@ -12,6 +12,16 @@ type TProps = {
   link: string;
 };
 
+const ShowImage = memo(function Image({ link }: { link: string }) {
+  return (
+    <img
+      src={link}
+      alt=""
+      className="max-h-[calc((100svh-12rem)/1.5)] rounded-xl"
+      loading="lazy"
+    />
+  );
+});
 export default function Work({
   author,
   name,
@@ -41,12 +51,7 @@ export default function Work({
             className="work-display flex flex-col items-center justify-center rounded-xl"
             style={{ flex: 1 }}
           >
-            <img
-              src={link}
-              alt=""
-              className="max-h-[calc((100svh-12rem)/1.5)] rounded-xl"
-              loading="lazy"
-            />
+            <ShowImage link={link}></ShowImage>
           </div>
           <div className="work-information flex-1 flex flex-col items-start text-start max-[800px]:items-center gap-1 w-full">
             <div className="author text-lg text-slate-300">{author}</div>
