@@ -3,3 +3,17 @@
   background-size: cover;
   filter: brightness(0.5);
 }
+
+.backgroundFilter {
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.5);
+}
+
+.header-main-text {
+  background: rgb(110, 70, 198);
+  background: linear-gradient(90deg, rgba(110, 70, 198, 1) 0%, rgba(174, 58, 58, 1) 65%, rgba(164, 0, 255, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

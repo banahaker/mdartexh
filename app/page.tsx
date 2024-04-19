@@ -38,12 +38,18 @@ export default function Home() {
 
   return (
     <>
-      <div className="backgroundFilter h-[100dvh] bg-[url('/images/sample_picture.jpg')] bg-center bg-cover flex flex-col items-center justify-center gap-2">
-        <h1 className="text-6xl font-bold text-white">你好，世界</h1>
-        <h2 className="text-2xl text-gray-300 font-medium">
-          明道中學高中美展 7th
-        </h2>
+      <div>
+        <div className="backgroundFilter h-[100dvh] bg-[url('/images/main_vision.webp')]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
+          <h1 className="header-main-text text-6xl font-bold text-white">
+            夢艷
+          </h1>
+          <h2 className="text-2xl text-gray-300 font-medium">
+            明道中學高中美展 7th
+          </h2>
+        </div>
       </div>
+
       {works.map((work) => {
         return <Work key={work.link} {...work}></Work>;
       })}

@@ -5,7 +5,7 @@ export type MenuLinkType = {
 
 export const HeaderMenuLinks: MenuLinkType[] = [
   {
-    name: "Home",
-    href: "/",
+    name: "About",
+    href: "/about",
   },
 ];
